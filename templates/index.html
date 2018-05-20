@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+{% block body %}
+<style type="text/css">
+    html{background-color:{{ bgcolor }};}
+    table{margin:auto;text-align:center;border-spacing:0px;border-style:none;padding:0px;}
+    th{height:100%;width:100%;}
+</style>
+<table id="image">
+    {% for hexdata_row in hexdata %}
+        <tr>
+            {% for pixel in hexdata_row %}
+                <td style="background: {{ pixel }};"></td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
